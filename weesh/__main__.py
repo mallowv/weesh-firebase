@@ -1,6 +1,7 @@
 from os import getenv
 from typing import Optional
 from uuid import uuid4
+import json
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
@@ -11,7 +12,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 # Use a service account
-cred = credentials.Certificate(getenv("FIREBASE_CERT"))
+cred = credentials.Certificate(json.loads(getenv("FIREBASE_CERT")))
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
