@@ -12,7 +12,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 # Use a service account
-cred = credentials.Certificate('darussalam-weesh-firebase-adminsdk-9zxm1-a6d666729c.json')
+cred = credentials.Certificate(json.loads(getenv("FIREBASE_CERT")))
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
