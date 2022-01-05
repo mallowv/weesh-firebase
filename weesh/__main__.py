@@ -46,7 +46,7 @@ async def read_item(url: str):
 
 @app.post("/")
 async def make_shortcut(url: NewURL, req: Request):
-    doc_ref = db.collection('cities').document(url.id)
+    doc_ref = db.collection('urls').document(url.id)
 
     doc = doc_ref.get()
     if url.id:
