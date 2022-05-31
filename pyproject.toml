@@ -15,6 +15,7 @@ firebase-admin = "^5.0.2"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 taskipy = "^1.8.2"
+pylint = "^2.13.9"
 
 [tool.taskipy.tasks]
 start = "uvicorn weesh.__main__:app --reload"
