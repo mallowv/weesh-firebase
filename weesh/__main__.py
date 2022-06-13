@@ -42,8 +42,11 @@ app.mount("/static", StaticFiles(directory="ui"), name="ui")
 
 @app.get("/")
 async def root():
-    with open("ui/index.html") as f:
-        return HTMLResponse(content=f.read(), status_code=200)
+    """
+    Serve the UI to user when user visits the root
+    """
+    with open("ui/index.html", encoding="utf8") as file:
+        return HTMLResponse(content=file.read(), status_code=200)
 
 @app.post("/shorten")
 async def make_shortcut(url: NewURL, req: Request):
