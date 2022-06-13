@@ -6,9 +6,7 @@ authors = ["UstmanAbdurahman <72262190+UstmanAbdurahman@users.noreply.github.com
 
 [tool.poetry.dependencies]
 python = "^3.9"
-SQLAlchemy = "1.4.23"
 fastapi = "^0.68.1"
-psycopg2 = "^2.9.1"
 uvicorn = "^0.15.0"
 firebase-admin = "^5.0.2"
 aiofiles = "^0.8.0"
