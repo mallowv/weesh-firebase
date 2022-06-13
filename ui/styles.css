@@ -1,0 +1,16 @@
+.mb-3 {
+  padding: 20rem;
+}
+
+.btn-primary {
+  margin-top: 1rem;
+}
+
+.shortened {
+  color: rgb(48, 48, 48);
+  margin-top: 1rem;
+}
+
+.input-group-addon {
+  padding-right: 10px;
+}
